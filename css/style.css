@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 9vh;
+    min-height: 100vh;
+}
+.border {
+    border: 3px solid #436faa;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   }
+.left{
+   background-color: #436faa;
+   width: 100%;
+   margin-right: 20px;
+}
+nav{
+    flex-basis: 200px;
+    margin: 0 10px 0 0;
+}
+
+.main{
+    display: flex;
+}
+.what{
+    
+    display: flex;
+    margin: 1.66%;
+}
+.cl{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input {
+    display: none;
+}

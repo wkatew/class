@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <img style="padding: 38px;" src="img/ключ.png" alt="" width="150" height="100"></p> 
+                <nav>  
+                    <ul>
+                        <p><a href="1.html"><div> Формы </div> </a></p>
+                        <p><a href="2.html"><div> Активация текстовых полей </div> </a> </p>
+                        <p><a href="3.html"><div> Работа со списком </div> </a></p>
+                        <p><a href="4.html"><div> Изменение надписи на кнопке </div> </a></p>
+                        <p><a href="5.html"><div> Фокусировка поля </div> </a></p>
+                    </ul>
+                </nav> 
+        </div>
+        <form action="" class="right">
+            <fieldset class="cl">
+                <legend> Личные данные </legend>
+                <label for="surname">Фамилия </label>
+                <input type="text" id="surname" accesskey="9" title="Alt+9">
+                <label for="name">Имя</label>
+                <input type="text" id="name" accesskey="8" title="Alt+8">
+                <label for="middlename">Отчество</label>
+                <input type="text" id="middlename" accesskey="7" title="Alt+7">
+
+            </fieldset>
+            <fieldset class="cl">
+                <legend> Данные о начислениях </legend>
+                <label for="many">Начислено </label>
+                <input type="text" id="many">
+                <label for="no">Удержано</label>
+                <input type="text" id="no">
+                <label for="end">Итого</label>
+                <input type="text" id="end"> <br>
+                <button type="button" onclick="f()">Подсчитать</button>
+            </fieldset>
+            <div class="what">
+                <a href="index.html"><img src="img/налево.webp" alt="" ></a> 
+                <a href="2.html" ><img src="img/направо.webp" alt=""></a>
+            </div>
+        </form>
+    </div>
+    <script>
+        function f(){
+            const many = parseInt(document.getElementById('many').value)||0;
+            const no = parseInt(document.getElementById('no').value)||0;
+            const end = many - no;
+            document.getElementById('end').value = end;
+        }
+    </script>
+</body>
+</html>

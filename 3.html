@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <img style="padding: 38px;" src="img/ключ.png" alt="" width="150" height="100"></p> 
+                <nav>  
+                    <ul>
+                        <p><a href="1.html"><div> Формы </div> </a></p>
+                        <p><a href="2.html"><div> Активация текстовых полей </div> </a> </p>
+                        <p><a href="3.html"><div> Работа со списком </div> </a></p>
+                        <p><a href="4.html"><div> Изменение надписи на кнопке </div> </a></p>
+                        <p><a href="5.html"><div> Фокусировка поля </div> </a></p>
+                    </ul>
+                </nav> 
+        </div>
+        <div class="right">
+            <fieldset>
+                <legend>Работа со списком</legend>
+                <label><input type="checkbox" id="check" onclick="kat()"> Активировать список</label><br>
+                <select id="options" disabled onchange="gimi()">
+                    <option value="1">Книги</option>
+                    <option value="2">Спорт</option>
+                    <option value="3">Цвета</option>
+                </select>
+                <button type="button" onclick="gimi()">Показать выбор</button>
+                <p id="result"></p>
+            </fieldset>
+            <a href="activation.html" class="button-link-l"></a>
+            <a href="button_text.html" class="button-link-r"></a>
+            <div class="what">
+                <a href="2.html"><img src="img/налево.webp" alt="" ></a> 
+                <a href="4.html" ><img src="img/направо.webp" alt=""></a>
+            </div>  
+        </div>
+       
+    </div>
+    <script>
+         function kat() {
+            document.getElementById('options').disabled = !document.getElementById('check').checked;
+        }
+        function gimi() {
+            let select = document.getElementById('options');
+            alert(`Вы выбрали: ${select.selectedIndex + 1} - ${select.options[select.selectedIndex].text}`);
+        }
+    </script
+</body>
+</html>
